@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Will You Go On A Date With Me? 💕</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="hearts-bg" aria-hidden="true"></div>
+
+  <!-- PAGE 1: Landing -->
+  <section id="page-landing" class="page active">
+    <div class="card glass">
+      <div class="card-emoji">💌</div>
+      <h1 class="card-title">Will You Go On A Date With Me?&nbsp;❤️</h1>
+      <p class="card-sub">I promise it'll be the most magical day ever&nbsp;✨</p>
+      <div class="btn-group">
+        <button id="btn-yes" class="btn btn-yes" onclick="handleYes()">Yes&nbsp;💖</button>
+        <button id="btn-no"  class="btn btn-no"
+          onmousemove="escapeNo(event)"
+          ontouchstart="escapeNo(event)"
+          onclick="escapeNo(event)">No&nbsp;😢</button>
+      </div>
+      <p id="funny-msg" class="funny-msg" aria-live="polite"></p>
+      <p class="reasons">Reasons I Like You:&nbsp;<strong>Infinite&nbsp;♾️</strong></p>
+    </div>
+  </section>
+
+  <!-- PAGE 2: Date Picker -->
+  <section id="page-date" class="page">
+    <div class="card glass">
+      <div class="card-emoji">🥰</div>
+      <h2 class="card-title">Yay! You Made Me The Happiest Person&nbsp;❤️</h2>
+      <p class="card-sub">Choose our special date&nbsp;💕</p>
+      <input type="date" id="date-picker" class="date-input" />
+      <button class="btn btn-yes" onclick="confirmDate()">Confirm Date&nbsp;💝</button>
+    </div>
+  </section>
+
+  <!-- PAGE 3: Celebration -->
+  <section id="page-celebrate" class="page">
+    <div id="confetti-container" aria-hidden="true"></div>
+    <div class="card glass celebrate-card">
+      <div class="card-emoji big-emoji">💖</div>
+      <h2 class="card-title">Thank You, My Sweet Heart&nbsp;❤️</h2>
+      <p class="card-sub celebrate-sub">I Can't Wait To Spend This Beautiful Day With You&nbsp;💖</p>
+      <p id="chosen-date-display" class="chosen-date"></p>
+      <p class="reasons">Reasons I Like You:&nbsp;<strong>Infinite&nbsp;♾️</strong></p>
+    </div>
+  </section>
+
+  <footer class="footer">Made With Love&nbsp;❤️</footer>
+  <script src="app.js"></script>
+</body>
+</html>
